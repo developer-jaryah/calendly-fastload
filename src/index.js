@@ -40,7 +40,7 @@ export class CalendlyFastLoad {
 
   registerServiceWorker() {
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/service-worker.js').catch((err) => {
+      navigator.serviceWorker.register('https://cdn.jsdelivr.net/gh/developer-jaryah/calendly-fastload@v1.0.0/src/service-worker.js').catch((err) => {
         console.warn('CalendlyFastLoad: Service Worker registration failed:', err);
       });
     }
