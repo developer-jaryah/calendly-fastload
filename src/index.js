@@ -53,6 +53,8 @@ export class CalendlyFastLoad {
       const trigger = document.querySelector(this.triggerSelector);
       if (trigger) {
         trigger.addEventListener('click', () => this.loadWidget());
+      } else {
+        console.warn('CalendlyFastLoad: Trigger element not found');
       }
     } else if (this.lazyLoadTrigger === 'visible') {
       const container = document.querySelector(this.containerSelector);
@@ -64,6 +66,8 @@ export class CalendlyFastLoad {
           }
         });
         observer.observe(container);
+      } else {
+        console.warn('CalendlyFastLoad: Container element not found');
       }
     }
   }
@@ -86,8 +90,7 @@ export class CalendlyFastLoad {
   }
 
   initializeWidget() {
-    window.Calendly.initInlineWidget({
-      url: this.calendlyUrl,
+    window.Calendly.showPopupWidget(this.calendlyUrl, 'PopupWidget', {
       parentElement: document.querySelector(this.containerSelector),
     });
   }
