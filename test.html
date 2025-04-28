@@ -1,1 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendly FastLoad Test</title>
+</head>
+<body>
+  <h1>Calendly FastLoad Test</h1>
+  <div class="calendly-container"></div>
+  <button class="calendly-trigger">Book Now</button>
 
+  <script src="./dist/calendly-fastload.min.js"></script>
+  <script>
+    const calendly = new CalendlyFastLoad({
+      calendlyUrl: 'https://calendly.com/your-username',
+      lazyLoadTrigger: 'click',
+      containerSelector: '.calendly-container',
+      triggerSelector: '.calendly-trigger'
+    });
+    calendly.init();
+  </script>
+</body>
+</html>
