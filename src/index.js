@@ -3,7 +3,7 @@ export class CalendlyFastLoad {
     this.calendlyUrl = options.calendlyUrl || 'https://calendly.com/your-username';
     this.widgetJs = 'https://assets.calendly.com/assets/external/widget.js';
     this.widgetCss = 'https://assets.calendly.com/assets/external/widget.css';
-    this.lazyLoadTrigger = options.lazyLoadTrigger || 'click'; // 'click', 'visible', 'immediate'
+    this.lazyLoadTrigger = options.lazyLoadTrigger || 'click';
     this.containerSelector = options.containerSelector || '.calendly-container';
     this.triggerSelector = options.triggerSelector || '.calendly-trigger';
   }
