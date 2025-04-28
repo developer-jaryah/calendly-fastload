@@ -1,6 +1,6 @@
 const CACHE_NAME = 'calendly-fastload-v1';
 const urlsToCache = [
-  'https://assets.calendly.com/assets/external/widget.js',
+  'https://your-cdn.com/modified-widget.min.js', // or official 'https://assets.calendly.com/assets/external/widget.js'
   'https://assets.calendly.com/assets/external/widget.css',
 ];
 
